@@ -1,0 +1,9 @@
+# Byggmappar
+dist/
+node_modules/
+
+# Systemfiler
+.DS_Store
+
+# Miljöfiler
+.env
