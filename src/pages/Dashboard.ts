@@ -46,8 +46,21 @@ function renderDreams(): void {
       renderDreams();
     });
 
+    // Ta bort dröm
+    const deleteButton = document.createElement("button");
+    deleteButton.type = "button";
+    deleteButton.innerHTML = `<img src="../assets/images/trash_delete.png" alt="Radera">`;
+
+    deleteButton.addEventListener("click", () => {
+      dreams = dreams.filter((d) => d.id !== dream.id);
+      saveDreams(dreams);
+      renderDreams();
+    });
+
     listItem.appendChild(checkbox);
     listItem.appendChild(label);
+    listItem.appendChild(deleteButton);
+
     dreamListElement.appendChild(listItem);
   });
 }
